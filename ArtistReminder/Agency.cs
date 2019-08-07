@@ -6,6 +6,6 @@
 
         public abstract void MeetGuests();
 
-        public abstract void PlaceReservation();
+        public abstract void ReservePlace();
     }
 }
