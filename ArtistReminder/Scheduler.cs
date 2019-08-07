@@ -62,5 +62,37 @@ namespace ArtistReminder
         {
             return new List<Meeting>();
         }
+
+        /// <summary>
+        /// Facade implementation
+        /// </summary>
+        /// <param name="meeting"></param>
+        public void Add(Meeting meeting)
+        {
+            new LogService().Add($"Create object {meeting}");
+
+            // sends email to artist
+            new EmailService().SendEmail(meeting);
+
+            // send email to agent
+            new EmailService().SendEmail(meeting);
+
+            // send email to bodyguard
+            new EmailService().SendEmail(meeting);
+
+            new OutlookService().CreateMeeting(meeting);
+
+            // send SMS to artist
+            new SmsService().SendSMS(meeting);
+
+            // send SMS to agent
+            new SmsService().SendSMS(meeting);
+
+            // send SMS to agent
+            new SmsService().SendSMS(meeting);
+
+            // send SMS to friends
+            new SmsService().SendSMS(meeting);
+        }
     }
 }
