@@ -10,7 +10,7 @@
         {
         }
 
-        public override void PlaceReservation()
+        public override void FindPlace()
         {
         }
     }

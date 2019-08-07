@@ -13,7 +13,7 @@ namespace ArtistReminder
 
         internal void DoIt()
         {
-            agency.PlaceReservation();
+            agency.FindPlace();
 
             agency.MeetGuests();
 
